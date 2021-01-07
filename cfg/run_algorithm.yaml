@@ -1,0 +1,21 @@
+num_rollouts: 1
+rollout_steps: 10000
+toppling: 1
+plot_ci: 1
+
+policies:
+  - type: GQCNN
+    params:
+      eps_greedy: 0.05
+  - type: UCRL2
+    params: {}
+  - type: UCB
+    params:
+      strength: 0
+  - type: TS
+    params:
+      strength: 0
+  - type: TS
+    params:
+      strength: 5
+  
